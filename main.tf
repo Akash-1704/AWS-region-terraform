@@ -7,15 +7,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  alias  = "us-east-1"
-  region = "us-east-1"
-}
-
-provider "aws" {
-  alias  = "ap-south-1"
-  region = "ap-south-1"
-}
 
 module "vpc-ap-south-1" {
   source = "terraform-aws-modules/vpc/aws"
@@ -26,9 +17,6 @@ module "vpc-ap-south-1" {
   azs             = var.aws_vpc_azs["ap-south-1"]
   public_subnets  = var.aws_vpc_public_subnets
 
-  providers = {
-    aws = aws.ap-south-1
-  }
 
   tags = {
     Name = "vpc-ap-south-1"
@@ -72,6 +60,7 @@ module "ec2_us_east_1" {
   subnet_id     = element(module.vpc-us-east-1.public_subnets, 0)
   ami_id        = var.ami_id["us-east-1"]
   region        = "us-east-1"
+  provider      = aws.us-east-1
   #providers = {
     #aws = aws.us-east-1
   #}
