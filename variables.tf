@@ -44,8 +44,8 @@ variable "ami_id" {
   description = "Mapping of regions to AMI IDs"
   type        = map(string)
   default = {
-    "ap-south-1" = "ami-05e00961530ae1b55" # Example AMI ID for us-east-1
-    "us-east-1" = "ami-04b70fa74e45c3917" # Example AMI ID for us-east-2
+    "ap-south-1" = "ami-05e00961530ae1b55" 
+    "us-east-1"  = "ami-0e001c9271cf7f3b9" 
   }
 }
 
