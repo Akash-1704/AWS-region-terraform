@@ -36,6 +36,11 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
+variable "ami_id" {
+  description = "AMI ID to use for the EC2 instances"
+  type        = string
+  default     = "ami-05e00961530ae1b55"
+}
 
 variable "aws_sg_name" {
   type        = string
