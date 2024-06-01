@@ -16,7 +16,7 @@ module "vpc-ap-south-1" {
   }
 }
 
-module "vpc_us_east_1" {
+module "vpc-us-east-1" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = var.aws_vpc_name
