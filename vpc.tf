@@ -8,3 +8,4 @@ module "vpc" {
   public_subnets  = var.aws_vpc_public_subnets
 
  
+}
