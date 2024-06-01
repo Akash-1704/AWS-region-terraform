@@ -44,7 +44,7 @@ module "ec2_ap_south_1" {
   region        = "ap-south-1"
   instance_type = var.instance_type
   subnet_id     = element(module.vpc-ap-south-1.public_subnets, 0)
-  ami_id        = var.ami_id
+  ami_id        = var.ami_id["ap-south-1"]
 }
 
 module "ec2_us_east_1" {
@@ -52,5 +52,5 @@ module "ec2_us_east_1" {
   region        = "us-east-1"
   instance_type = var.instance_type
   subnet_id     = element(module.vpc-us-east-1.public_subnets, 0)
-  ami_id        = var.ami_id
+  ami_id        = var.ami_id["us-east-1"]
 }
