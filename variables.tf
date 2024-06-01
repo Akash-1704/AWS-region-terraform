@@ -36,15 +36,13 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "ami_id" {
-  description = "AMI ID to use for the EC2 instances"
-  type        = string
-  default     = "ami-05e00961530ae1b55"
-}
 
-variable "aws_sg_name" {
-  type        = string
-  description = "security group name"
-  default     = "demo_ecs_sg"
+variable "ami_id" {
+  description = "Mapping of regions to AMI IDs"
+  type        = map(string)
+  default = {
+    "ap-south-1" = "ami-05e00961530ae1b55" # Example AMI ID for us-east-1
+    "us-east-1" = "ami-04b70fa74e45c3917" # Example AMI ID for us-east-2
+  }
 }
 
