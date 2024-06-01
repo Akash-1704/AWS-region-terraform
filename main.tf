@@ -8,7 +8,7 @@ module "vpc-ap-south-1" {
   name = var.aws_vpc_name
   cidr = var.aws_vpc_cidr
 
-  azs             = var.aws_vpc_azs
+  azs             = var.aws_vpc_azs["ap-south-1"]
   public_subnets  = var.aws_vpc_public_subnets
 
   tags = {
@@ -22,7 +22,7 @@ module "vpc-us-east-1" {
   name = var.aws_vpc_name
   cidr = var.aws_vpc_cidr
 
-  azs             = var.aws_vpc_azs
+  azs             = var.aws_vpc_azs["us-east-1"]
   public_subnets  = var.aws_vpc_public_subnets
   
   providers = {
