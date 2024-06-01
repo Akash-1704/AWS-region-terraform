@@ -60,7 +60,7 @@ module "ec2_us_east_1" {
   subnet_id     = element(module.vpc-us-east-1.public_subnets, 0)
   ami_id        = var.ami_id["us-east-1"]
   region        = "us-east-1"
-  provider      = aws.us-east-1
+  providers      = aws.us-east-1
   #providers = {
     #aws = aws.us-east-1
   #}
