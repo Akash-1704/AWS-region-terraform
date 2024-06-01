@@ -19,7 +19,7 @@ module "vpc-ap-south-1" {
 
 
   tags = {
-    Name = "vpc-ap-south-1"
+    Name = var.aws_vpc_name
   }
 }
 
@@ -37,7 +37,7 @@ module "vpc-us-east-1" {
   }
 
   tags = {
-    Name = "vpc-us-east-1"
+    Name = var.aws_vpc_name
   }
 }
 
@@ -49,9 +49,7 @@ module "ec2_ap_south_1" {
   subnet_id     = element(module.vpc-ap-south-1.public_subnets, 0)
   ami_id        = var.ami_id["ap-south-1"]
   region        = "ap-south-1"
-  #providers = {
-    #aws = aws.ap-south-1
-  #}
+
 }
 
 module "ec2_us_east_1" {
