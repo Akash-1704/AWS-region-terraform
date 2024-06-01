@@ -1,14 +1,3 @@
-terraform {
-  required_providers = {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-
-  # (if you had a backend configuration in your
-  # old root module then move that into here too)
-}
-
 provider "aws" {
   alias  = "us-east-1"
   region = "us-east-1"
