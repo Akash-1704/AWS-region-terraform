@@ -49,7 +49,7 @@ module "ec2_ap_south_1" {
 
 module "ec2_us_east_1" {
   source        = "./modules/ec2"
-  provider = aws.us_east_1
+  provider      = aws.us_east_1
   instance_type = var.instance_type
   subnet_id     = element(module.vpc-us-east-1.public_subnets, 0)
   ami_id        = var.ami_id["us-east-1"]
