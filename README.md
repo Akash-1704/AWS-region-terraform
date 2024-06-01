@@ -33,7 +33,7 @@ This file is part of the custom EC2 module. It defines the EC2 instance resource
 
   Purpose: This modular approach allows for reusability of EC2 instance configuration across different environments or regions.
 
-**  modules/ec2/variables.tf**
+**modules/ec2/variables.tf**
 
 This file defines the variables for the custom EC2 module, including the region, instance type, subnet ID, and AMI ID. These variables are used to configure the EC2 instances.
 
