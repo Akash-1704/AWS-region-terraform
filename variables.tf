@@ -20,7 +20,6 @@ variable "aws_vpc_cidr" {
 variable "aws_vpc_azs" {
   type        = map(list(string))
   description = "Add list of AZs available in the region that you want to use. Example ['ap-south-1a', 'ap-south-1b', 'ap-south-1c']"
-  default     = 
   default     = {
     "us-east-1" = ["us-east-1a", "us-east-1b", "us-east-1c"]
     "ap-south-1" = ["ap-south-1a", "ap-south-1b"]
