@@ -1,6 +1,6 @@
-**Terraform Multi-Region Deployment**
+### Terraform Multi-Region Deployment
 
-This Terraform configuration sets up an infrastructure that deploys two EC2 instances in two different AWS regions (us-east-1 and ap-south-1). The configuration includes creating VPCs and subnets in each region and launching EC2 instances in these subnets. The setup uses Terraform modules for reusability and modularity.
+#### This Terraform configuration sets up an infrastructure that deploys two EC2 instances in two different AWS regions (us-east-1 and ap-south-1). The configuration includes creating VPCs and subnets in each region and launching EC2 instances in these subnets. The setup uses Terraform modules for reusability and modularity.
 
 
 **Files Description**
